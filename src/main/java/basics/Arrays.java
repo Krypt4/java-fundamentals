@@ -11,7 +11,7 @@ package basics;
 
 public class Arrays {
 
-	public static void main(String[] args) {
+	public static void main() {
 
         // Unidimensional array of integers
         int[] num = {5, 3, 8, 1, 9};

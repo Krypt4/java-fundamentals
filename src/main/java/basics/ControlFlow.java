@@ -8,7 +8,7 @@ package basics;
 
 public class ControlFlow {
 
-    public static void main(String[] args) {
+    public static void main() {
 
         // Conditional statements
         int grade = 85;
