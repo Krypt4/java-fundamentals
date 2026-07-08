@@ -49,7 +49,7 @@ public class ControlFlow {
             case 6, 7 -> "Weekend";
             default -> "Weekday";
         };
-        logger.info("Day type: " + dayType);
+        logger.info("Day type: {}", dayType);
 
         // Looping statements
         logger.info("--- for ---");
@@ -70,14 +70,14 @@ public class ControlFlow {
         logger.info("--- while ---");
         int counter = 0;
         while (counter < 3) {
-            logger.info("While iteration: " + counter);
+            logger.info("While iteration: {}", counter);
             counter++;
         }
 
         logger.info("--- do-while ---");
         int value = 0;
         do {
-            logger.info("Do-while iteration: " + value);
+            logger.info("Do-while iteration: {}", value);
             value++;
         } while (value < 3);
 
