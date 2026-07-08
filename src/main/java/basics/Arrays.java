@@ -4,20 +4,13 @@ package basics;
 
  * Technical demonstration of basic array operations in Java:
 
-    It shows the initialization, manipulation, and traversal of 1D arrays (unidimensional)
+    Initialization, manipulation, and traversal of 1D arrays (unidimensional)
     and 2D arrays (matrices) using standard memory management and loops.
-
-
- * Key features demonstrated:
-
-    1 - Array Initialization: Explicit values declaration and fixed-size allocation.
-    2 - Element Access: Zero-based indexing, boundary safety (.length), and cloning.
-    3 - Traversals: Enhanced for-each loop and nested iterative structures for matrices.
-    4 - Algorithm Logic: Linear lookup to determine the maximum value within a dataset.
 
 */
 
 public class Arrays {
+
 	public static void main(String[] args) {
 
         // Unidimensional array of integers
