@@ -83,10 +83,10 @@ public class ControlFlow {
 
         // Loop control statements
         logger.info("--- break and continue ---");
-        for (int i = 1; i <= 10; i++) {
-            if (i == 7) break;
-            if (i % 2 == 0) continue;
-            logger.info("{} ", i);
+        for (int i = 1; i < 7; i++) {
+            if (i % 2 != 0) {
+                logger.info("{} ", i);
+            }
         }
         logger.info("");
     }
