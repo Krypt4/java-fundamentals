@@ -1,13 +1,13 @@
 package basics;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /*
 
  * Control structures: if/else, switch, for, while, do-while.
 
  */
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ControlFlow {
 
