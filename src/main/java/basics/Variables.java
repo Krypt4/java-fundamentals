@@ -42,9 +42,14 @@ public class Variables {
         double decimalValue = 9.99;
         int integerValue = (int) decimalValue;
         logger.info("Explicit casting double->int: {}", integerValue);
-        {
-            int localVariable = 5;
-            logger.info("Local variable inside the block: {}", localVariable);
-        }
+
+        // Extracted method call
+        logLocalVariable();
+    }
+
+    // Extracted method to handle local variable logging
+    private static void logLocalVariable() {
+        int localVariable = 5;
+        logger.info("Local variable inside the block: {}", localVariable);
     }
 }
