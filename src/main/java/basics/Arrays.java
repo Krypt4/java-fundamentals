@@ -35,7 +35,9 @@ public class Arrays {
         names[0] = "name0";
         names[1] = "name1";
         names[2] = "name2";
-        logger.info("Names: {}", java.util.Arrays.toString(names));
+        if (logger.isInfoEnabled()) {
+            logger.info("Names: {}", java.util.Arrays.toString(names));
+        }
 
         // Finding the maximum value in the integer array
         int max = num[0];
@@ -47,7 +49,9 @@ public class Arrays {
         // Cloning and sorting the integer array
         int[] copy = num.clone();
         java.util.Arrays.sort(copy);
-        logger.info("Sorted: {}", java.util.Arrays.toString(copy));
+        if (logger.isInfoEnabled()) {
+            logger.info("Sorted: {}", java.util.Arrays.toString(copy));
+        }
 
         // 2D array of integers
         logger.info("--- Matrix 2D ---");
