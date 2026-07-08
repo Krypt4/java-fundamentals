@@ -16,8 +16,11 @@ public class Operators {
     public static void main(){
 
         // Arithmetic Operators
-        int a = 10, b = 3;
         logger.info("--- Arithmetic Operators ---");
+
+        int a = 10;
+        int b = 3;
+
         logger.info("a + b = {}", a + b);
         logger.info("a - b = {}", a - b);
         logger.info("a * b = {}", a * b);
@@ -38,7 +41,10 @@ public class Operators {
 
         // Logical Operators
         logger.info("--- Logical Operators ---");
-        boolean p = true, q = false;
+
+        boolean p = true;
+        boolean q = false;
+
         logger.info("p && q = {}", p && q);
         logger.info("p || q = {}", p || q);
         logger.info("!p = {}", !p);
