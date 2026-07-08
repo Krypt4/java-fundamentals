@@ -6,83 +6,88 @@ package basics;
 
  */
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ControlFlow {
+
+    private static final Logger logger = LoggerFactory.getLogger(ControlFlow.class);
 
     public static void main() {
 
         // Conditional statements
         int grade = 85;
-        System.out.println("--- if / else ---");
+        logger.info("--- if / else ---");
         if (grade >= 90) {
-            System.out.println("Excellent");
+            logger.info("Excellent");
         } else if (grade >= 70) {
-            System.out.println("Good");
+            logger.info("Good");
         } else if (grade >= 50) {
-            System.out.println("Pass");
+            logger.info("Pass");
         } else {
-            System.out.println("Fail");
+            logger.info("Fail");
         }
 
         // Conditional expressions
-        System.out.println("--- switch ---");
+        logger.info("--- switch ---");
         int dayOfWeek = 3;
         switch (dayOfWeek) {
             case 1:
-                System.out.println("Monday");
+                logger.info("Monday");
                 break;
             case 2:
-                System.out.println("Tuesday");
+                logger.info("Tuesday");
                 break;
             case 3:
-                System.out.println("Wednesday");
+                logger.info("Wednesday");
                 break;
             default:
-                System.out.println("Other day");
+                logger.info("Other day");
         }
 
         String dayType = switch (dayOfWeek) {
             case 6, 7 -> "Weekend";
             default -> "Weekday";
         };
-        System.out.println("Day type: " + dayType);
+        logger.info("Day type: " + dayType);
 
         // Looping statements
-        System.out.println("--- for ---");
+        logger.info("--- for ---");
         for (int i = 1; i <= 5; i++) {
             System.out.print(i + " ");
         }
-        System.out.println();
+        logger.info("");
 
         // Enhanced for loop
-        System.out.println("--- for-each ---");
+        logger.info("--- for-each ---");
         int[] numbers = {10, 20, 30, 40};
         for (int n : numbers) {
-            System.out.print(n + " ");
+            logger.info("{} ", n);
         }
-        System.out.println();
+        logger.info("");
 
         // While and do-while loops
-        System.out.println("--- while ---");
+        logger.info("--- while ---");
         int counter = 0;
         while (counter < 3) {
-            System.out.println("While iteration: " + counter);
+            logger.info("While iteration: " + counter);
             counter++;
         }
 
-        System.out.println("--- do-while ---");
+        logger.info("--- do-while ---");
         int value = 0;
         do {
-            System.out.println("Do-while iteration: " + value);
+            logger.info("Do-while iteration: " + value);
             value++;
         } while (value < 3);
 
         // Loop control statements
-        System.out.println("--- break and continue ---");
+        logger.info("--- break and continue ---");
         for (int i = 1; i <= 10; i++) {
             if (i == 7) break;
             if (i % 2 == 0) continue;
-            System.out.print(i + " ");
+            logger.info("{} ", i);
         }
-        System.out.println();
+        logger.info("");
     }
 }
