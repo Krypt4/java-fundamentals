@@ -54,7 +54,7 @@ public class ControlFlow {
         // Looping statements
         logger.info("--- for ---");
         for (int i = 1; i <= 5; i++) {
-            System.out.print(i + " ");
+            logger.info("{} ", i);
         }
         logger.info("");
 
