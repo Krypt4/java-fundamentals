@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
  * Definition of methods, parameters, overloading, and recursion.
 
 */
+
 public class Methods {
 
     private static final Logger logger = LoggerFactory.getLogger(Methods.class);
