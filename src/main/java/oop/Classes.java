@@ -15,16 +15,20 @@ class Person {
 
     String name;
     int age;
+    boolean adult;
 
     // Constructor to initialize the name and age attributes
     Person(String name, int age) {
         this.name = name;
         this.age = age;
+        this.adult = age >= 18;
     }
 
     // Method to introduce the person which prints their name and age
     void introduceOneself() {
-        logger.info("Hello, I am {} and I am {} years old.", name, age);
+        logger.info("Hello, I am {} and I am {} years old", name, age);
+        if(adult) logger.info("I am an adult");
+        else logger.info("I am not an adult");
     }
 
     // Method to celebrate a birthday which increases the age
@@ -40,7 +44,7 @@ public class Classes {
         final Logger logger = LoggerFactory.getLogger(Classes.class);
 
         Person p1 = new Person("exampleName1", 28);
-        Person p2 = new Person("exampleName2", 34);
+        Person p2 = new Person("exampleName2", 10);
 
         p1.introduceOneself();
         p2.introduceOneself();
