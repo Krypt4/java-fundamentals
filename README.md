@@ -30,7 +30,7 @@ I would appreciate any advice or recommendations on how to expand both my knowle
 
 # 02 | Object-Oriented Programming (OOP)
 
-<h3>The four pillars of OOP in Java, with independent and executable examples</h3>
+<h3>The pillars of OOP in Java, with independent and executable examples</h3>
 
 | File | Concept | Content |
 |---|---|---|
