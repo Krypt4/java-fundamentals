@@ -46,7 +46,7 @@ class FullTimeEmployee extends Employee {
     // Overriding the abstract method from the superclass
     @Override
     double calculateSalary() {
-        return baseSalary; // fixed salary, no variations
+        return baseSalary; // Fixed salary, no variations
     }
 }
 
@@ -57,6 +57,7 @@ class CommissionEmployee extends Employee {
 
     // Constructor that calls the superclass constructor and initializes commissions attribute
     CommissionEmployee(String name, double baseSalary, double commissions) {
+
         super(name, baseSalary);
         this.commissions = commissions;
     }
@@ -69,8 +70,6 @@ class CommissionEmployee extends Employee {
 }
 
 public class AbstractClasses {
-
-    private static final Logger logger = LoggerFactory.getLogger(AbstractClasses.class);
 
     public static void main(){
 
