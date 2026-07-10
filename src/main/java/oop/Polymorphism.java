@@ -51,7 +51,8 @@ class Circle extends Shape {
 class Rectangle extends Shape {
 
     // Constructor that calls the superclass constructor
-    double base, height;
+    double base;
+    double height;
 
     Rectangle(double base, double height) {
         this.base = base;
