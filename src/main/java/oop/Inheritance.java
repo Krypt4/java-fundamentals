@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 // Base class (superclass)
 class Animal {
 
-    Logger logger = LoggerFactory.getLogger(Animal.class);
+    private static final Logger logger = LoggerFactory.getLogger(Animal.class);
 
-    protected String name;
+    protected final String name;
 
     Animal(String name) {
         this.name = name;
@@ -32,7 +32,7 @@ class Animal {
 // Derived class (subclass) that inherits from Animal
 class Dog extends Animal {
 
-    Logger logger = LoggerFactory.getLogger(Dog.class);
+    private static final Logger logger = LoggerFactory.getLogger(Dog.class);
 
     Dog(String name) {
         super(name);
@@ -51,7 +51,7 @@ class Dog extends Animal {
 // Derived class (subclass) that inherits from Animal
 class Cat extends Animal {
 
-    Logger logger = LoggerFactory.getLogger(Cat.class);
+    private static final Logger logger = LoggerFactory.getLogger(Cat.class);
 
     Cat(String name) {
         super(name);
@@ -67,7 +67,12 @@ public class Inheritance {
 
     private static final Logger logger = LoggerFactory.getLogger(Inheritance.class);
 
-    public static void main(String[] args) {
+    // Private constructor to prevent instantiation from outside the class
+    private Inheritance() {
+        throw new IllegalStateException("Utility class");
+    }
+
+    public static void main() {
 
         Dog dog = new Dog("nameDog");
         Cat cat = new Cat("nameCat");
