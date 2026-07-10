@@ -85,7 +85,9 @@ public class Polymorphism {
 
         // The correct method is called based on the ACTUAL type of the object
         for (Shape f : shapes) {
-            logger.info("{} -> area: {}", f.name(), f.calculateArea());
+            if (logger.isInfoEnabled()) {
+                logger.info("{} -> area: {}", f.name(), f.calculateArea());
+            }
         }
     }
 }
