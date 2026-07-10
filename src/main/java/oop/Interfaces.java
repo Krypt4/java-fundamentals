@@ -1,11 +1,10 @@
 package oop;
 
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /*
-
  * Interfaces: contracts that classes must fulfill.
- They allow "multiple inheritance" of behavior, as a class can implement multiple interfaces.
 
 */
 
@@ -22,7 +21,7 @@ interface Swimmable {
 // A Duck can fly and swim, so we have to implement both interfaces
 class Duck implements Flyable, Swimmable {
 
-    private static final Logger logger = Logger.getLogger(Duck.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(Duck.class);
 
     // Implement the abstract methods from the interfaces
     @Override
@@ -45,13 +44,18 @@ interface Calculator {
 
     // Default method: will provide a default implementation within the interface
     default void showInfo() {
-        Logger.getLogger(Calculator.class.getName()).info("I am a generic calculator.");
+        LoggerFactory.getLogger(Calculator.class).info("I am a generic calculator.");
     }
 }
 
 public class Interfaces {
 
-    private static final Logger logger = Logger.getLogger(Interfaces.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(Interfaces.class);
+
+    // Private constructor to prevent instantiation from outside the class
+    private Interfaces() {
+        throw new IllegalStateException("Utility class");
+    }
 
     public static void main() {
 
@@ -64,8 +68,10 @@ public class Interfaces {
         Calculator addition = (a, b) -> a + b;
         Calculator subtraction = (a, b) -> a - b;
 
-        logger.info(String.format("Addition result: %d", addition.operate(5, 3)));
-        logger.info(String.format("Subtraction result: %d", subtraction.operate(5, 3)));
+        if (logger.isInfoEnabled()) {
+            logger.info("Addition result: {}", addition.operate(5, 3));
+            logger.info("Subtraction result: {}", subtraction.operate(5, 3));
+        }
 
         // Calling the inherited default method
         addition.showInfo();
