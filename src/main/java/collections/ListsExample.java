@@ -39,7 +39,7 @@ public class ListsExample {
         for (String fruit : fruits) {
             traversalResult.append(fruit).append(" | ");
         }
-        logger.log(Level.INFO, "{0}", traversalResult.toString());
+        logger.log(Level.INFO, "{0}", traversalResult);
 
         // LinkedList: Efficient for frequent insertions and deletions
         LinkedList<Integer> numbers = new LinkedList<>();
