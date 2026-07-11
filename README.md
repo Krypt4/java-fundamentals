@@ -43,4 +43,17 @@ I would appreciate any advice or recommendations on how to expand both my knowle
 
 <br>
 
+# 03 | Collections (Java Collections Framework)
+
+<h3>Standard data structures for storing and manipulating groups of objects</h3>
+
+| File | Content |
+|---|---|
+| [`ListsExample.java`](src/main/java/collections/ListsExample.java) | `ArrayList` and `LinkedList`: add, insert, remove, iterate / traverse |
+| [`SetsExample.java`](src/main/java/collections/SetsExample.java) | `HashSet` (no duplicates, unordered) and `TreeSet` (sorted) |
+| [`MapsExample.java`](src/main/java/collections/MapsExample.java) | `HashMap` and `TreeMap`: key-value pairs, `getOrDefault`, iteration / traversal |
+| [`ComparatorsExample.java`](src/main/java/collections/ComparatorsExample.java) | `Comparable` (natural ordering) vs. `Comparator` (external/custom ordering) |
+
+<br>
+
 # ꧁⎝ ON PROCESS 😄 ⎠꧂
