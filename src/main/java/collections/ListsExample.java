@@ -3,7 +3,7 @@ package collections;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 /*
 
@@ -27,23 +27,23 @@ public class ListsExample {
         // Insert at a specific position
         fruits.add(1, "Kiwi");
 
-        logger.info("Fruit list: " + fruits);
-        logger.info("Element at index 2: " + fruits.get(2));
-        logger.info("Contains 'Orange'?: " + fruits.contains("Orange"));
+        logger.log(Level.INFO, "Fruit list: {0}", fruits);
+        logger.log(Level.INFO, "Element at index 2: {0}", fruits.get(2));
+        logger.log(Level.INFO, "Contains ''Orange''?: {0}", fruits.contains("Orange"));
 
         fruits.remove("Kiwi");
-        logger.info("After removing 'Kiwi': " + fruits);
+        logger.log(Level.INFO, "After removing ''Kiwi'': {0}", fruits);
 
         // Iteration / Traversal
         StringBuilder traversalResult = new StringBuilder("Traversal: ");
         for (String fruit : fruits) {
             traversalResult.append(fruit).append(" | ");
         }
-        logger.info(traversalResult.toString());
+        logger.log(Level.INFO, "{0}", traversalResult.toString());
 
         // LinkedList: Efficient for frequent insertions and deletions
         LinkedList<Integer> numbers = new LinkedList<>();
-        
+
         numbers.add(10);
         numbers.add(20);
 
@@ -53,7 +53,7 @@ public class ListsExample {
         // Adds to the end
         numbers.addLast(30);
 
-        logger.info("LinkedList: " + numbers);
-        logger.info("First: " + numbers.getFirst() + " | Last: " + numbers.getLast());
+        logger.log(Level.INFO, "LinkedList: {0}", numbers);
+        logger.log(Level.INFO, "First: {0} | Last: {1}", new Object[]{numbers.getFirst(), numbers.getLast()});
     }
 }
