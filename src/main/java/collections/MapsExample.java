@@ -24,7 +24,7 @@ public class MapsExample {
         ages.put("Ana", 25);
         ages.put("Luis", 30);
         ages.put("Marta", 28);
-        ages.put("Ana", 26); // Overwrites the previous value of "Ana"
+        // ages.put("Ana", 26); --> If we uncomment this line, it will overwrite the previous value of "Ana"
 
         logger.log(Level.INFO, "Complete Map: {0}", ages);
         logger.log(Level.INFO, "Luis''s age: {0}", ages.get("Luis"));
