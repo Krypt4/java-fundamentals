@@ -48,10 +48,9 @@ public class ExceptionHandling {
         try {
             int parsedNumber = Integer.parseInt("abc"); // NumberFormatException
             logger.log(Level.INFO, "Parsed number: {0}", parsedNumber);
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException _) {
             logger.info("Could not convert the text to a number.");
         }
-
         logger.info("The program continues normally after handling all errors.");
     }
 }
