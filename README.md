@@ -134,4 +134,4 @@ I would appreciate any advice or recommendations on how to expand both my knowle
 # ꧁⎝ ON PROCESS 😄 ⎠꧂ 
 
 <h3>If someone has more ideas to expand my project I will apreciate it! :p
-I will continue adding more things ^^ and learning while I continue working in this repository</h3>
+I’ll keep adding more things and learning as I continue working on this repository ^^</h3>
