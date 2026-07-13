@@ -56,4 +56,16 @@ I would appreciate any advice or recommendations on how to expand both my knowle
 
 <br>
 
+# 04 | Exception Handling
+
+<h3>Managing runtime errors in a controlled manner</h3>
+
+| File | Content |
+|---|---|
+| [`ExceptionHandling.java`](src/main/java/exceptions/ExceptionHandling.java) | `try/catch/finally`, multiple `catch` blocks, common exceptions (`ArithmeticException`, `NullPointerException`, etc.) |
+| [`CustomExceptions.java`](src/main/java/exceptions/CustomExceptions.java) | Custom exceptions: *checked* (`extends Exception`) vs. *unchecked* (`extends RuntimeException`) |
+| [`TryWithResources.java`](src/main/java/exceptions/TryWithResources.java) | Automatic resource management using `try-with-resources` and `AutoCloseable` |
+
+<br>
+
 # ꧁⎝ ON PROCESS 😄 ⎠꧂
