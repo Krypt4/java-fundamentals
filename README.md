@@ -56,4 +56,28 @@ I would appreciate any advice or recommendations on how to expand both my knowle
 
 <br>
 
+# 04 | Exception Handling
+
+<h3>Managing runtime errors in a controlled manner</h3>
+
+| File | Content |
+|---|---|
+| [`ExceptionHandling.java`](src/main/java/exceptions/ExceptionHandling.java) | `try/catch/finally`, multiple `catch` blocks, common exceptions (`ArithmeticException`, `NullPointerException`, etc.) |
+| [`CustomExceptions.java`](src/main/java/exceptions/CustomExceptions.java) | Custom exceptions: *checked* (`extends Exception`) vs. *unchecked* (`extends RuntimeException`) |
+| [`TryWithResources.java`](src/main/java/exceptions/TryWithResources.java) | Automatic resource management using `try-with-resources` and `AutoCloseable` |
+
+<br>
+
+# 05 | Lambdas and Streams (Modern Java)
+
+<h3>Functional programming (introduced in Java 8+), lambda expressions and the Streams API</h3>
+
+| File | Content |
+|---|---|
+| [`LambdasBasics.java`](src/main/java/functional/LambdasBasics.java) | Functional interfaces: `Function`, `BiFunction`, `Predicate`, `Supplier`, `Runnable`, method references |
+| [`StreamsBasics.java`](src/main/java/functional/StreamsBasics.java) | `filter`, `map`, `forEach`, `collect`, `count`, `anyMatch`, `allMatch` |
+| [`AdvancedStreams.java`](src/main/java/functional/AdvancedStreams.java) | `reduce`, `groupingBy`, `sorted` with `Comparator`, statistics, `IntStream` |
+
+<br>
+
 # ꧁⎝ ON PROCESS 😄 ⎠꧂
