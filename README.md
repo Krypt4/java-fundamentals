@@ -68,4 +68,16 @@ I would appreciate any advice or recommendations on how to expand both my knowle
 
 <br>
 
+# 05 | Lambdas and Streams (Modern Java)
+
+<h3>Functional programming (introduced in Java 8+), lambda expressions and the Streams API</h3>
+
+| File | Content |
+|---|---|
+| [`LambdasBasics.java`](src/main/java/functional/LambdasBasics.java) | Functional interfaces: `Function`, `BiFunction`, `Predicate`, `Supplier`, `Runnable`, method references |
+| [`StreamsBasics.java`](src/main/java/functional/StreamsBasics.java) | `filter`, `map`, `forEach`, `collect`, `count`, `anyMatch`, `allMatch` |
+| [`AdvancedStreams.java`](src/main/java/functional/AdvancedStreams.java) | `reduce`, `groupingBy`, `sorted` with `Comparator`, statistics, `IntStream` |
+
+<br>
+
 # ꧁⎝ ON PROCESS 😄 ⎠꧂
