@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-// https://www.hungrycoders.com/blog/understanding-java-streams-with-code-examples
-
 /*
+
+  https://www.hungrycoders.com/blog/understanding-java-streams-with-code-examples
 
  * Streams: Filter, map, forEach, collect (basic operations on collections)
 
