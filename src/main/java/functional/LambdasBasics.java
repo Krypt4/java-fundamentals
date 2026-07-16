@@ -1,9 +1,6 @@
 package functional;
 
-import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,34 +36,35 @@ public final class LambdasBasics {
         LOGGER.info("--- Demonstration Completed ---");
     }
 
-
     // Runnable: Accepts no parameters, returns no value
     private static void demonstrateRunnable() {
         LOGGER.info("--- Runnable ---");
+
         Runnable task = () -> LOGGER.info("Running a task with no parameters.");
         task.run();
     }
 
-
-    // Function<T, R>: Accepts one parameter of type T, returns a value of type R
+    // IntUnaryOperator: Specialized to accept an int and return an int
     private static void demonstrateFunction() {
         LOGGER.info("--- Function ---");
-        Function<Integer, Integer> square = n -> n * n;
-        LOGGER.log(Level.INFO, "5 squared: {0}", square.apply(5));
+
+        IntUnaryOperator square = n -> n * n;
+        LOGGER.log(Level.INFO, "5 squared: {0}", square.applyAsInt(5));
     }
 
-
-    // BiFunction<T, U, R>: Accepts two parameters (types T and U), returns type R
+    // BinaryOperator<Integer>: Accepts two parameters of the same type and returns a value of the same type
     private static void demonstrateBiFunction() {
         LOGGER.info("--- BiFunction ---");
-        BiFunction<Integer, Integer, Integer> multiply = (a, b) -> a * b;
+
+        BinaryOperator<Integer> multiply = (a, b) -> a * b;
         LOGGER.log(Level.INFO, "4 x 6 = {0}", multiply.apply(4, 6));
     }
 
-    // Predicate<T>: Accepts one parameter of type T, returns a boolean value
+    // IntPredicate: Accepts a primitive int and returns a boolean
     private static void demonstratePredicate() {
         LOGGER.info("--- Predicate ---");
-        Predicate<Integer> isEven = n -> n % 2 == 0;
+
+        IntPredicate isEven = n -> n % 2 == 0;
         LOGGER.log(Level.INFO, "Is 7 even?: {0}", isEven.test(7));
         LOGGER.log(Level.INFO, "Is 8 even?: {0}", isEven.test(8));
     }
@@ -74,14 +72,16 @@ public final class LambdasBasics {
     // Supplier<T>: Accepts no parameters, returns a value of type T
     private static void demonstrateSupplier() {
         LOGGER.info("--- Supplier ---");
+
         Supplier<String> messageSupplier = () -> "Dynamically generated message";
         LOGGER.log(Level.INFO, "{0}", messageSupplier.get());
     }
 
-    // Multi-line Lambda: Shows how to handle conditional blocks inside a Lambda expression
+    // IntFunction<String>: Accepts a primitive int and returns an Object (String)
     private static void demonstrateMultiLineLambda() {
         LOGGER.info("--- Multi-line Lambda ---");
-        Function<Integer, String> classifyNumber = n -> {
+
+        IntFunction<String> classifyNumber = n -> {
             if (n < 0) {
                 return "Negative";
             }
@@ -93,10 +93,11 @@ public final class LambdasBasics {
         LOGGER.log(Level.INFO, "Classification of -5: {0}", classifyNumber.apply(-5));
     }
 
-    // Method Reference: A shorter, more readable alternative to lambda expressions when only calling an existing method
+    // ToIntFunction<String>: Accepts an Object (String) and returns a primitive int
     private static void demonstrateMethodReference() {
         LOGGER.info("--- Method Reference ---");
-        Function<String, Integer> stringLength = String::length;
-        LOGGER.log(Level.INFO, "Length of 'Java': {0}", stringLength.apply("Java"));
+
+        ToIntFunction<String> stringLength = String::length;
+        LOGGER.log(Level.INFO, "Length of 'Java': {0}", stringLength.applyAsInt("Java"));
     }
 }
