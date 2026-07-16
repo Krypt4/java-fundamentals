@@ -1,15 +1,16 @@
 <h1>Java Fundamentals Proyect</h1>
 
-- A repository dedicated to demonstrating technical mastery of Java (SE) fundamentals,
-focusing on best practices, clean code, and performance.
+<h3> Repository dedicated to demonstrating technical mastery of Java (SE) fundamentals, <br>
+focusing on best practices, clean code, and performance. :octocat:</h3>
 
-- In this proyect, my objetive is to learn while i code until i dominate all the fundamentals of Java.
+<br>
 
-- I have created milestones and issues for all the pending tasks in this repository 
+> [!NOTE]
+> In this proyect, my objetive is to learn while i code until i dominate all the fundamentals of Java. <br>
+> I have created milestones and issues for all the pending tasks in this repository. <br>
+> I would appreciate any advice or recommendations on how to expand both my knowledge and my portfolio in this area. <br>
 
-- I would appreciate any advice or recommendations on how to expand both my knowledge and my portfolio in this area.
-
-<h2>Thanks in advance! 😃❤️</h2>
+<h2>Thanks in advance! :shipit::shipit::shipit:💖</h2>
 
 <br>
 
@@ -133,5 +134,6 @@ focusing on best practices, clean code, and performance.
 
 # ꧁⎝ ON PROCESS 😄 ⎠꧂ 
 
-<h3>If someone has more ideas to expand my project I will apreciate it! :p
-I’ll keep adding more things and learning as I continue working on this repository ^^</h3>
+> [!IMPORTANT]
+> If someone has more ideas to expand my project I will apreciate it! :p <br>
+> I’ll keep adding more things and learning as I continue working on this repository ^^
