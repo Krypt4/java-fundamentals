@@ -52,12 +52,12 @@ public final class LambdasBasics {
         LOGGER.log(Level.INFO, "5 squared: {0}", square.applyAsInt(5));
     }
 
-    // BinaryOperator<Integer>: Accepts two parameters of the same type and returns a value of the same type
+    // IntBinaryOperator: Accepts two primitive ints and returns a primitive int (No Integer boxing)
     private static void demonstrateBiFunction() {
         LOGGER.info("--- BiFunction ---");
 
-        BinaryOperator<Integer> multiply = (a, b) -> a * b;
-        LOGGER.log(Level.INFO, "4 x 6 = {0}", multiply.apply(4, 6));
+        IntBinaryOperator multiply = (a, b) -> a * b;
+        LOGGER.log(Level.INFO, "4 x 6 = {0}", multiply.applyAsInt(4, 6));
     }
 
     // IntPredicate: Accepts a primitive int and returns a boolean
