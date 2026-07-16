@@ -35,7 +35,7 @@ public class ExceptionHandling {
         String text = null;
         try {
             logger.log(Level.INFO, "{0}", text.length()); // NullPointerException
-        } catch (NullPointerException e) {
+        } catch (NullPointerException _) {
             logger.log(Level.SEVERE, "Error: null reference.");
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Generic error: {0}", e.getMessage());
