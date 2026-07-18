@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 
 /*
 
-  https://www.geeksforgeeks.org/java/lambda-expressions-java-8/
+    https://www.geeksforgeeks.org/java/lambda-expressions-java-8/
 
  * Lambda expressions and functional interfaces
 
