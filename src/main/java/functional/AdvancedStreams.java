@@ -9,9 +9,9 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-// https://blog.tangly.net/blog/2024/advanced-streams/
-
 /*
+
+    https://blog.tangly.net/blog/2024/advanced-streams/
 
  * Advanced flows: Reduce, groupBy, sorted with comparator, statistics
 
