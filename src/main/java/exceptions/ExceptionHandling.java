@@ -23,11 +23,11 @@ public class ExceptionHandling {
             logger.log(Level.SEVERE, "Arithmetic error: {0}", e.getMessage());
         }
 
-        // Example 2: Out of bounds access | Array error (ArrayIndexOutOfBoundsException)
+        // Example 2: Safe array access | Prevented ArrayIndexOutOfBoundsException
         int[] numbers = {1, 2, 3};
         try {
-            int invalidIndex = numbers.length + 2;
-            logger.log(Level.INFO, "{0}", numbers[invalidIndex]);
+            int validIndex = numbers.length - 1;
+            logger.log(Level.INFO, "{0}", numbers[validIndex]);
         } catch (ArrayIndexOutOfBoundsException e) {
             logger.log(Level.SEVERE, "Index out of bounds: {0}", e.getMessage());
         }
