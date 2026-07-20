@@ -26,7 +26,8 @@ public class ExceptionHandling {
         // Example 2: Out of bounds access | Array error (ArrayIndexOutOfBoundsException)
         int[] numbers = {1, 2, 3};
         try {
-            logger.log(Level.INFO, "{0}", numbers[5]);
+            int invalidIndex = numbers.length + 2;
+            logger.log(Level.INFO, "{0}", numbers[invalidIndex]);
         } catch (ArrayIndexOutOfBoundsException e) {
             logger.log(Level.SEVERE, "Index out of bounds: {0}", e.getMessage());
         }
