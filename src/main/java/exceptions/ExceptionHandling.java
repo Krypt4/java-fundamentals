@@ -13,6 +13,7 @@ public class ExceptionHandling {
 
     private static final Logger logger = Logger.getLogger(ExceptionHandling.class.getName());
 
+    @SuppressWarnings("java:S2259")
     public static void main() {
 
         // Example 1: Division by zero | Arithmetic error (ArithmeticException)
