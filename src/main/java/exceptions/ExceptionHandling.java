@@ -13,7 +13,6 @@ public class ExceptionHandling {
 
     private static final Logger logger = Logger.getLogger(ExceptionHandling.class.getName());
 
-    @SuppressWarnings("java:S2259")
     public static void main() {
 
         // Example 1: Division by zero | Arithmetic error (ArithmeticException)
@@ -36,7 +35,7 @@ public class ExceptionHandling {
         // Example 3: Multiple catch blocks + finally | Generic error (Exception)
         String text = null;
         try {
-            logger.log(Level.INFO, "{0}", text.length()); // NullPointerException
+            logger.log(Level.INFO, "{0}", text.length()); // NOSONAR
         } catch (NullPointerException _) {
             logger.log(Level.SEVERE, "Error: null reference.");
         } catch (Exception e) {
