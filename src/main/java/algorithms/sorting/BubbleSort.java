@@ -1,8 +1,7 @@
 package algorithms.sorting;
 
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.*;
+import java.util.logging.*;
 
 /*
 
@@ -17,12 +16,24 @@ public class BubbleSort {
 
     private static final Logger LOGGER = Logger.getLogger(BubbleSort.class.getName());
 
+    // Private constructor to prevent instantiation (Utility Class)
+    private BubbleSort() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static void sort(int[] arr) {
+
+        // Check for null or empty array to avoid unnecessary processing
+        if (arr == null || arr.length == 0) {
+            return;
+        }
 
         int n = arr.length;
 
         for (int i = 0; i < n - 1; i++) {
+
             boolean swapped = false;
+
             // Each pass places the next largest element in its correct position
             for (int j = 0; j < n - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -32,18 +43,25 @@ public class BubbleSort {
                     swapped = true;
                 }
             }
+
             // If no elements were swapped, the array is already sorted
             if (!swapped) {
                 break;
             }
         }
     }
+
     public static void main() {
 
         int[] data = {64, 34, 25, 12, 22, 11, 90};
 
-        LOGGER.log(Level.INFO, "Before: {0}", Arrays.toString(data));
+        // Log the state of the array before and after sorting for debugging purposes
+        LOGGER.info(() -> "Before: " + Arrays.toString(data));
+
+        // Sort the array using the Bubble Sort algorithm
         sort(data);
-        LOGGER.log(Level.INFO, "After:  {0}", Arrays.toString(data));
+
+        // Log the state of the array after sorting to verify correctness
+        LOGGER.info(() -> "After:  " + Arrays.toString(data));
     }
 }
