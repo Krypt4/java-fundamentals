@@ -1,8 +1,7 @@
 package algorithms.sorting;
 
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.*;
+import java.util.logging.*;
 
 /*
 
@@ -17,8 +16,20 @@ public class QuickSort {
 
     private static final Logger LOGGER = Logger.getLogger(QuickSort.class.getName());
 
+    // Private constructor to prevent instantiation (Utility Class)
+    private QuickSort() {
+        throw new IllegalStateException("Utility class");
+    }
+
     // The main function that implements QuickSort
     public static void sort(int[] arr, int low, int high) {
+
+        // Check for null or empty array to avoid unnecessary processing
+        if (arr == null || arr.length == 0) {
+            return;
+        }
+
+        // Check if the low index is less than the high index to ensure there are elements to sort
         if (low < high) {
             int pivotIndex = partition(arr, low, high);
             sort(arr, low, pivotIndex - 1);  // Sort the left half
@@ -54,8 +65,13 @@ public class QuickSort {
 
         int[] data = {10, 7, 8, 9, 1, 5};
 
-        LOGGER.log(Level.INFO, "Before: {0}", Arrays.toString(data));
+        // Log the array before sorting
+        LOGGER.info(() -> "Before: " + Arrays.toString(data));
+
+        // Sort the array using QuickSort
         sort(data, 0, data.length - 1);
-        LOGGER.log(Level.INFO, "After:  {0}", Arrays.toString(data));
+
+        // Log the array after sorting
+        LOGGER.info(() -> "After:  " + Arrays.toString(data));
     }
 }
