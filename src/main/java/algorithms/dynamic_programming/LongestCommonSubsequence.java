@@ -1,7 +1,6 @@
 package algorithms.dynamic_programming;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 /*
 
@@ -17,6 +16,11 @@ public class LongestCommonSubsequence {
 
     private static final Logger LOGGER = Logger.getLogger(LongestCommonSubsequence.class.getName());
 
+    // Private constructor to prevent instantiation (Utility Class)
+    private LongestCommonSubsequence() {
+        throw new IllegalStateException("Utility class");
+    }
+
     // Calculates the length of the longest common subsequence
     public static int calculateLength(String text1, String text2) {
 
@@ -25,7 +29,7 @@ public class LongestCommonSubsequence {
         return dpTable[text1.length()][text2.length()];
     }
 
-     // Reconstructs and returns the actual longest common subsequence
+    // Reconstructs and returns the actual longest common subsequence
     public static String reconstruct(String text1, String text2) {
 
         validateInputs(text1, text2);
@@ -51,7 +55,6 @@ public class LongestCommonSubsequence {
 
     // Helper method to build the DP table, avoiding code duplication
     private static int[][] buildDpTable(String text1, String text2) {
-
         int n = text1.length();
         int m = text2.length();
         int[][] dp = new int[n + 1][m + 1];
@@ -81,9 +84,10 @@ public class LongestCommonSubsequence {
         String text1 = "ABCBDAB";
         String text2 = "BDCABA";
 
-        LOGGER.log(Level.INFO, "Text 1: {0}", text1);
-        LOGGER.log(Level.INFO, "Text 2: {0}", text2);
-        LOGGER.log(Level.INFO, "LCS Length: {0}", calculateLength(text1, text2));
-        LOGGER.log(Level.INFO, "Subsequence found: {0}", reconstruct(text1, text2));
+        // Log the input texts and the results of the LCS calculations
+        LOGGER.info(() -> "Text 1: " + text1);
+        LOGGER.info(() -> "Text 2: " + text2);
+        LOGGER.info(() -> "LCS Length: " + calculateLength(text1, text2));
+        LOGGER.info(() -> "Subsequence found: " + reconstruct(text1, text2));
     }
 }
