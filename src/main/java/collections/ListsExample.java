@@ -25,27 +25,21 @@ public class ListsExample {
         // Insert at a specific position
         fruits.add(1, "Kiwi");
 
-        // Log the entire list using a single log statement to avoid multiple evaluations
-        if (logger.isLoggable(Level.INFO)) {
-            logger.log(Level.INFO, "Fruit list: {0}", fruits);
-        }
+        // Logging the current state of the list
+        logger.info(() -> String.format("Fruit list: %s", fruits));
 
         // Accessing elements and checking for existence
         String elementAtIndex2 = fruits.get(2);
         boolean containsOrange = fruits.contains("Orange");
 
-        // Log the accessed elements and existence check results
-        if (logger.isLoggable(Level.INFO)) {
-            logger.log(Level.INFO, "Element at index 2: {0}", elementAtIndex2);
-            logger.log(Level.INFO, "Contains ''Orange''?: {0}", containsOrange);
-        }
+        // Logging the accessed element and existence check
+        logger.info(() -> String.format("Element at index 2: %s", elementAtIndex2));
+        logger.info(() -> String.format("Contains 'Orange'?: %b", containsOrange));
 
         fruits.remove("Kiwi");
 
-        // Log the list after removing an element
-        if (logger.isLoggable(Level.INFO)) {
-            logger.log(Level.INFO, "After removing ''Kiwi'': {0}", fruits);
-        }
+        // Logging the state of the list after removal
+        logger.info(() -> String.format("After removing 'Kiwi': %s", fruits));
 
         // Iteration / Traversal
         StringBuilder traversalResult = new StringBuilder("Traversal: ");
@@ -53,10 +47,8 @@ public class ListsExample {
             traversalResult.append(fruit).append(" | ");
         }
 
-        // Log the traversal result
-        if (logger.isLoggable(Level.INFO)) {
-            logger.log(Level.INFO, "{0}", traversalResult);
-        }
+        // Logging the traversal result
+        logger.info(traversalResult::toString);
 
         // LinkedList: Efficient for frequent insertions and deletions
         LinkedList<Integer> numbers = new LinkedList<>();
@@ -70,18 +62,14 @@ public class ListsExample {
         // Adds to the end
         numbers.addLast(30);
 
-        // Log the entire LinkedList
-        if (logger.isLoggable(Level.INFO)) {
-            logger.log(Level.INFO, "LinkedList: {0}", numbers);
-        }
+        // Logging the current state of the LinkedList
+        logger.info(() -> String.format("LinkedList: %s", numbers));
 
         // Accessing first and last elements
         Integer first = numbers.getFirst();
         Integer last = numbers.getLast();
 
-        // Log the first and last elements of the LinkedList
-        if (logger.isLoggable(Level.INFO)) {
-            logger.log(Level.INFO, "First: {0} | Last: {1}", new Object[]{first, last});
-        }
+        // Logging the first and last elements
+        logger.info(() -> String.format("First: %s | Last: %s", first, last));
     }
 }
