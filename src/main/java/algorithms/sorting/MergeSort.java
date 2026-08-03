@@ -1,8 +1,7 @@
 package algorithms.sorting;
 
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.*;
+import java.util.logging.*;
 
 /*
 
@@ -17,15 +16,25 @@ public class MergeSort {
 
     private static final Logger LOGGER = Logger.getLogger(MergeSort.class.getName());
 
+    // Private constructor to prevent instantiation (Utility Class)
+    private MergeSort() {
+        throw new IllegalStateException("Utility class");
+    }
+
     // Recursively divide the array into halves, sort each half, and then merge them back together
     public static void sort(int[] arr, int start, int end) {
 
-        if (start < end) {
+        // Check for null or empty array to avoid unnecessary processing
+        if (arr == null || arr.length == 0) {
+            return;
+        }
 
+        // Check if the start index is less than the end index to ensure there are elements to sort
+        if (start < end) {
             int mid = start + (end - start) / 2;
 
             sort(arr, start, mid);            // Sort the left half
-            sort(arr, mid + 1, end);    // Sort the right half
+            sort(arr, mid + 1, end);          // Sort the right half
             merge(arr, start, mid, end);      // Combine both sorted halves
         }
     }
@@ -63,8 +72,13 @@ public class MergeSort {
 
         int[] data = {38, 27, 43, 3, 9, 82, 10};
 
-        LOGGER.log(Level.INFO, "Before: {0}", Arrays.toString(data));
+        // Log the array before sorting
+        LOGGER.info(() -> "Before: " + Arrays.toString(data));
+
+        // Sort the array using MergeSort
         sort(data, 0, data.length - 1);
-        LOGGER.log(Level.INFO, "After:  {0}", Arrays.toString(data));
+
+        // Log the array after sorting
+        LOGGER.info(() -> "After:  " + Arrays.toString(data));
     }
 }
