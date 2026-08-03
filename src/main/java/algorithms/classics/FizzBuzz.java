@@ -45,9 +45,8 @@ public class FizzBuzz {
 
         // Print FizzBuzz values for numbers from 1 to MAX_RANGE (100)
         for (int i = 1; i <= MAX_RANGE; i++) {
-            if (LOGGER.isLoggable(Level.INFO)) {
-                LOGGER.log(Level.INFO, "{0}", getFizzBuzzValue(i));
-            }
+            int current = i;
+            LOGGER.log(Level.INFO, () -> getFizzBuzzValue(current));
         }
     }
 }
